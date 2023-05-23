@@ -1,0 +1,71 @@
+import sys
+from PyQt5 import QtWidgets, uic
+
+app = QtWidgets.QApplication([])
+mi_gui = uic.loadUi("interfas_parqueadero.ui")
+
+from datetime import datetime
+servicio = "Servicio parqueo las 24 horas"
+print (servicio)
+
+#Variables para los precios
+def miparki():
+    tarifaHoraMoto = 12000
+    tarifaDiaMoto = 24000
+    tarifaHoraCarro = 20000
+    tarifaDiaCarro = 40000
+    year = "%Y-%m-%d"
+    formato = '%Y-%m-%d %H:%M:%S'
+    print('C para carros')
+    print('M para motSos')
+    opcion = mi_gui.txt_tipo.text()
+    if opcion=='M' or opcion=='m':
+        #Datos de ingreso :3
+        horaInM = mi_gui.txt_hora_in.text()
+        minutosInM = mi_gui.txt_minutos_in.text()
+        #Datos de salida :>
+        hora_out = mi_gui.txt_hora_out.text()
+        minuto_out = mi_gui.txt_minuto_out.text()
+        tiempo_in = datetime.strptime(year+" "+horaInM+":"+minutosInM+":"+"00",formato)
+        tiempo_o = datetime.strptime(year+" "+hora_out+":"+minuto_out+":"+"00",formato)
+        tiempo_p = tiempo_o - tiempo_in    
+        minutos = tiempo_p.seconds//60
+        horas=minutos//60
+        minutoF=minutos%60
+        dia = tiempo_p.days
+        if horas <=12 and dia<1:
+            valorApagar=horas*tarifaHoraMoto+minutoF*50
+            print("El valor a pagar es:", valorApagar)
+        else:
+            valorApagar=tarifaDiaMoto*dia
+            print("El valor a pagar es:", valorApagar)
+    if opcion=='C' or opcion=='c':
+        hora_ingresoC=input('Hora de ingreso:')
+        hora_salidaC=input('Hora de salida:')
+        tiempo_in = datetime.strptime(hora_ingresoC,formato)
+        tiempo_o = datetime.strptime(hora_salidaC,formato)
+        tiempo_p = tiempo_o - tiempo_in    
+        minutos=tiempo_p.seconds//60
+        horas = minutos//60
+        minutoF = minutos%60
+        dia = tiempo_p.days
+        if horas <=12 and dia<1:
+            valorApagar=horas*tarifaHoraCarro+minutoF*50
+            print("El valor a pagar es:", valorApagar)
+        else:
+            valorApagar=tarifaDiaCarro*dia
+            print("El valor a pagar es:", valorApagar)
+def limpiar():
+    mi_gui.txt_hora_in.clear()
+    mi_gui.txt_minutos_in.clear()
+    mi_gui.txt_hora_out.clear()
+    mi_gui.txt_minutos_out.clear()
+    mi_gui.txt_tipo.clear()
+def Cerrar():
+    mi_gui.close()
+
+mi_gui.botonLimpiar.clicked.connect(limpiar)
+mi_gui.botonCerrar.clicked.connect(Cerrar)
+
+mi_gui.show()
+app.exec_()
