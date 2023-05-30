@@ -1,0 +1,39 @@
+import sys
+from PyQt5 import QtWidgets,uic
+app = QtWidgets.QApplication([])
+mi_gui = uic.loadUi("casillas_vf.ui")
+mi_v = uic.loadUi("preguntitas_sabias.ui")
+def radiobuton():
+    global Puntaje
+    Puntaje = 0
+    if mi_gui.rbOpcionA.isChecked():
+        mi_gui.lblRespuesta.setText("WTF muy mal >:V")
+    if mi_gui.rbOpcionB.isChecked():
+        mi_gui.lblRespuesta.setText("No creoooo C:")
+    if mi_gui.rbOpcionC.isChecked():
+        mi_gui.lblRespuesta.setText("NOOOO muy mal:C")
+    if mi_gui.rbOpcionD.isChecked():
+        mi_gui.lblRespuesta.setText("Esta siiiii, correctaaaaaa :DDDD")
+        Puntaje = Puntaje + 25
+        mi_gui.hide()
+        mi_v.show
+def checkboxx():
+    global Puntaje
+    if mi_v.cbOpcionA.isChecked():
+        mi_v.lblRespuesta.setText("Terriblemente mal")
+    if mi_v.cbOpcionB.isChecked():
+        mi_v.lblRespuesta.setText("Correctoooo")
+        Puntaje = Puntaje + 25
+    if mi_v.cbOpcionC.isChecked():
+        mi_v.lblRespuesta.setText("Maaaaaal")
+    if mi_v.cbOpcionD.isChecked():
+        mi_v.lblRespuesta.setText("MUYYYYYY MAL")
+             
+def cerrar():
+    mi_gui.close()
+    
+mi_gui.botonResponder.clicked.connect(radiobuton)
+mi_gui.botonCerrar.clicked.connect(cerrar)
+mi_v.botonResponder.clicked.connect(checkboxx)
+mi_gui.show()
+app.exec()
