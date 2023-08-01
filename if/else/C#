@@ -1,0 +1,17 @@
+using System;
+class If {
+  static void Main(){
+  Console.WriteLine("introduzca nota:");
+  int Nota = Convert.ToInt32(
+      Console.ReadLine());
+    if (Nota >= 5)
+    {
+        Console.WriteLine("aprobado");
+    }
+    else
+    {
+        Console.WriteLine("suspendido");
+    }
+  
+}
+}
