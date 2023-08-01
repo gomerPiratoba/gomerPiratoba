@@ -1,0 +1,6 @@
+Console.Writeline("introduzca nota:");
+int Nota = Convert.Tolnt32(
+    console.ReadLine());
+if (Nota >=5)
+{
+Console.WriteLine("Aprobado");
