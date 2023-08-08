@@ -1,0 +1,25 @@
+
+class Monto
+{
+  static void Main() 
+  {
+    Console.WriteLine("Hola bienvenido al seguro de finanzas");
+    
+    Console.WriteLine("Cual es el Monto");
+    double Monto = Convert.ToDouble(Console.ReadLine());
+    
+    double descuento = 0;
+    
+    if (Monto >= 50000)
+    {
+        descuento = 0.02 * Monto; 
+    }
+    else
+    {
+        descuento = 0.03 * Monto;
+    }
+    
+    Console.WriteLine($"La cuota que debe pagar es: ${Monto}");
+    Console.WriteLine($"La cuota del 3% que debe pagar es: ${descuento}");
+  }
+}
