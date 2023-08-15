@@ -1,0 +1,29 @@
+ double precioPorComputadora = 2000000;
+        
+        Console.WriteLine("Ingrese la cantidad de computadoras que desea comprar:");
+        int cantidad = Convert.ToInt32(Console.ReadLine());
+
+        double totalSinDescuento = precioPorComputadora * cantidad;
+        double descuento = 0;
+
+        if (cantidad < 5)
+        {
+            descuento = 0.10 * totalSinDescuento;
+        }
+        else if (cantidad >= 5 && cantidad < 10)
+        {
+            descuento = 0.20 * totalSinDescuento;
+        }
+        else
+        {
+            descuento = 0.40 * totalSinDescuento;
+        }
+
+        double totalConDescuento = totalSinDescuento - descuento;
+
+        Console.WriteLine($"Total sin descuento: ${totalSinDescuento}");
+        Console.WriteLine($"Descuento aplicado: ${descuento}");
+        Console.WriteLine($"Total con descuento: ${totalConDescuento}");
+    }
+    
+  }
