@@ -1,4 +1,4 @@
- double precioPorComputadora = 2000000;
+ double precioPorComputadora = 11000;
         
         Console.WriteLine("Ingrese la cantidad de computadoras que desea comprar:");
         int cantidad = Convert.ToInt32(Console.ReadLine());
