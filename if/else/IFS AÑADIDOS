@@ -1,0 +1,28 @@
+static void Main() {
+    Console.WriteLine("introduzca la nota:");
+    int Nota = Convert.ToInt32(Console.ReadLine());
+    if (Nota < 5)
+    {
+        Console.WriteLine("reprobado");
+    }
+    else
+    {
+        if (Nota < 7)
+        {
+            Console.WriteLine("Aprobado");
+        }
+        else
+        {
+            if (Nota < 9)
+            {
+                Console.WriteLine("Notable");
+            }
+            else
+            {
+                Console.WriteLine("Sobresaliente");
+            }
+        }
+       
+    }
+  }
+}
