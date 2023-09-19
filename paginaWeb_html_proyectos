@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/nosotros.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nada</title>
+</head>
+<body>
+    <!--Aqui comienza la barra de navegacion-->
+    <header>
+        <div id="jh.jpg">
+            <img src="imagenes/jh.jpg" alt="" width="250px" height="250px">
+        </div>
+        <div>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Proyectos</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Pagina4</a></li>
+            </ul>
+        </div>
+    </header>
+    <!--Aqui comienza el cuerpo de la pagina-->
+    <section id="Padre">
+        <section id="sesion1">
+            <div id="h2">  
+                <h2>Juan Jose Sepulveda</h2>
+            </div>
+            <p>Que le dijo Batman a Robin antes de subirse
+                al carro, Robin suebte al carro JAJAJAJAJAJ
+                </p>
+            <div id="imagen1">
+                <img src="imagenes/speed.jpg" alt="" width="200px" height="150px">
+
+            </div>
+        </section>
+        <section id="sesion2">
+            <div id="h2">  
+                <h2>Santiago Zapata Torres</h2>
+            </div>
+            <p>Que hace un campesino con una vaca... pregunte: Que, so JJAJAJJAJA
+                </p>
+            <div id="imagen1">
+                <img src="imagenes/RISA.jpg" alt="" width="200px" height="150px">
+
+            </div>
+        </section>
+        <section id="sesion3">
+            <div id="h2">  
+                <h2>Gerardo Zapata</h2>
+            </div>
+            <p>Un niño especial llega tarde y yo le dije que llego con retraso JAAJJAAJJAAJ
+                </p>
+            <div id="imagen1">
+                <img src="imagenes/RISA.jpg" alt="" width="200px" height="150px">
+
+            </div>
+        </section>
+        <section id="sesion4">
+            <div id="h2">  
+                <h2>Juan Sebastian Betancur</h2>
+            </div>
+            <p>Que le dijo un maestro de ingles al niño especial? sit down JAJAJAJA
+                </p>
+            <div id="imagen1">
+                <img src="imagenes/RISA.jpg" alt="" width="200px" height="150px">
+
+            </div>
+        </section>
+        <section id="sesion5">
+            <div id="h2">  
+                <h2>Nicolas Pino</h2>
+            </div>
+            <p>Que pasa si cae un tsunami en Africa? Chococrispis JAJAJAJA
+                </p>
+            <div id="imagen1">
+                <img src="imagenes/RISA.jpg" alt="" width="200px" height="150px">
+
+            </div>
+        </section>
+        <!--Aqui comienza el pie de la pagina-->
+        <footer id="footer">
+          </div>
+                <h3>contactos</h3>
+                <p>Telefono: 3108744899</p>
+                <p>correo: zapatat.santiago@dinamarca.edu.co</p>
+         <div> 
+
+         </footer>    
+
+    </section>
+</body>
+</html>
