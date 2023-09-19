@@ -1,0 +1,95 @@
+body{
+    background-color: rgba(143, 54, 210, 0.666);
+    margin-top: 10px; 
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+
+}
+header{
+    background-color: rgb(44, 215, 204);
+    display: flex;
+    height: 120px;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 30px;
+    margin: 70px;
+}
+header ul{
+    display: flex;
+}
+
+header ul li{
+    list-style: none;
+    padding-right: 15px;
+}
+
+header ul li a{
+    font-size: 18px;
+    text-decoration: none;
+    float: right;
+}
+
+header ul li a:hover{
+    color: rgb(120, 48, 213);
+}
+/*Diseño para las sesiones*/
+#Padre{
+    display: flex;
+    margin-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+#sesion1{
+    border: 2px solid;
+    padding: 15px;
+    margin-right: 10px;
+    border-radius: 10px;
+    height: 400px;
+
+}
+#sesion2{
+    border: 2px solid;
+    padding: 15px;
+    margin-right: 10px;
+    border-radius: 10px;
+    height: 400px;
+
+}
+#sesion4{
+    border: 2px solid;
+    padding: 15px;
+    margin-right: 10px;
+    border-radius: 10px;
+    height: 400px;
+}
+#sesion5{
+    border: 2px solid;
+    padding: 15px;
+    margin-right: 10px;
+    border-radius: 10px;
+    height: 400px;
+}
+#h2{
+    text-align: center;
+}
+#footer{
+    text-align: center;
+}
+/*Estilo para la pagina principal"index"*/
+#index{
+    background-color: rgb(106, 209, 27);
+}
+.lado_izquierdo{
+    width: 300px;
+    height: 500px;
+    float: left;
+    border: 2px solid;
+}
+section{
+    background-color: aquamarine;
+    margin-left: 305px;
+    border: 2px solid;
+    height: 500px;
+}
